@@ -13,6 +13,14 @@ void min_max(int *arr, int size, int *min, int *max)
 	}
 }
 
+void aver(int *arr, int size, int *av)
+{
+	int sum = 0;
+	for (int i = 0; i < size - 1; i++) {
+		sum += arr[i];
+	} *av = sum / size;
+}
+
 
 int main()
 {
@@ -20,6 +28,10 @@ int main()
 		amin, amax;
 	min_max(arr, 8, &amin, &amax);
 	printf("min : %d\tmax :%d\n", amin, amax);
+	
+	int av;
+	aver(arr, 8, &av);
+	printf("%i\n", av);
 
 	return 0;
 }
