@@ -11,7 +11,7 @@ char* decimalToBinaryString(int num, const size_t sz)
 	//SZ - size of an output, padded with zeros to match the size
 #ifdef _WIN32 
 #ifdef _MSC_VER
-//#include <sal.h>
+#include <sal.h>
 	_Post_ _Notnull_ char* bin = (char*)malloc(sz) + 1;
 	memset(_In_ bin, 48, sz); //WarningC6387: bin could be '0'
 	bin[sz] = '\0';
